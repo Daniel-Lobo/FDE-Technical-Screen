@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.10
+
 def sort(width: int, height: int, length: int, mass: int):
     if type(width) is not int or type(height) is not int or type(length) is not int \
         or type(mass) is not int:
@@ -31,12 +33,12 @@ if __name__ == "__main__":
     Test(150, 50, 100, 20, "REJECTED")       # High height and bulky
     Test(100, 150, 50, 20, "REJECTED")       # High length and bulky
 
-    Test(100, 100, 100, 10, "SPECIAL")      # High volume not bulky
-    Test(100, 150, 50, 10, "SPECIAL")       # High width not bulky
-    Test(150, 50, 100, 10, "SPECIAL")       # High height not bulky
-    Test(100, 150, 50, 10, "SPECIAL")       # High length not bulky
+    Test(100, 100, 100, 10, "SPECIAL")       # High volume not bulky
+    Test(100, 150, 50, 10, "SPECIAL")        # High width not bulky
+    Test(150, 50, 100, 10, "SPECIAL")        # High height not bulky
+    Test(100, 150, 50, 10, "SPECIAL")        # High length not bulky
 
-    Test(50, 50, 50, 30, "SPECIAL")         # Bulky
+    Test(50, 50, 50, 30, "SPECIAL")          # Bulky
     Test(50, 50, 50, 10, "STANDARD")         # Standard
 
     try:
@@ -47,4 +49,5 @@ if __name__ == "__main__":
     try:
         Test(50, -50, 50, 10)       # Invalid height
     except ValueError as e:
-        print(f"ValueError caught")     
+        print(f"ValueError caught: TEST PASSED")     
+        
